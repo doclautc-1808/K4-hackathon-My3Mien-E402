@@ -143,7 +143,7 @@ export default function App() {
 
     const normalized = text.toLowerCase().trim();
     const includeQuiz =
-      Boolean(options.includeQuiz) ||
+      options.includeQuiz === true ||
       normalized.includes("quiz") ||
       normalized.includes("câu hỏi kiểm tra");
     const userMessage = createMessage("user", text);
